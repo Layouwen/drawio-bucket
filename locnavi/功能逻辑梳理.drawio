@@ -1,1 +1,46 @@
-<mxfile host="app.diagrams.net" modified="2023-02-03T06:54:56.273Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.14" etag="41K9yB_ew4n1TJBUQkOw" type="github"><diagram name="第 1 页" id="Sn4efJZ5c-k_Yycz3FCg">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-02-03T07:03:26.870Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="DhBjYYLKL1TpBXl3JM-A" version="20.8.14" type="github">
+  <diagram name="无线报警逻辑" id="Sn4efJZ5c-k_Yycz3FCg">
+    <mxGraphModel dx="1370" dy="1110" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-1" value="运营商" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-43" y="-128" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-2" value="SOS报警按钮" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-210" y="35" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-4" value="lbs server" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="17" y="71" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-5" value="station server" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="21" y="221" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-6" value="flowtrace server" style="ellipse;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="21" y="348" width="144" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-8" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-124" y="21" as="sourcePoint" />
+            <mxPoint x="-47" y="-50" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-9" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="68" y="-42" as="sourcePoint" />
+            <mxPoint x="86" y="26" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-14" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. 通过 nbiot 接口接收运行商的推送数据&lt;/span&gt;&lt;/div&gt;2. 将运行商的数据格式转成 tag 的数据格式，通过 http 请求发送至 station" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="153" y="50" width="553" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-15" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. 接收到数据后，创建 tag 标签&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. 判断 tag 标签的类型，通过 socket 推送消息至 flowtrace&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="167" y="210.5" width="553" height="101" as="geometry" />
+        </mxCell>
+        <mxCell id="ulPrnc9Bf3cGGpfg8e5x-16" value="&lt;div style=&quot;&quot;&gt;1. socket 监听事件类型，创建相关的报警消息&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="186" y="335" width="553" height="101" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
